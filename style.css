@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root
+{
+    --bg-color1:#2a323c;
+    --white:#fefdfd;
+    --black:#54585f;
+    --gold:#fde4be;
+    --pink:#FFC0CB;
+    --border:.1rem solid #2a323c;
+    --border-hover:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem var(--black);
+}
+
+*
+{
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    /* border: none; */
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none;
+}
+
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar
+{
+    width: 1rem;
+}
+html::-webkit-scrollbar-track
+{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb
+{
+    background: var(--bg-color1);
+}
+
+.btn
+{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: var(--white);
+    background: var(--bg-color1);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.btn:hover
+{
+    background-color: var(--pink);
+}
+
+section
+{
+    padding: 3rem 9%;
+}
+
+
+.header .header-1
+{
+    background: var(--white);
+    padding: 1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-1 .logo
+{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--black);
+}
+.header .header-1 .logo i
+{
+    color: var(--black);
+}
+.header .header-1 .search-form
+{
+    width: 50rem;
+    height: 5rem;
+    border: var(--border);
+    overflow: hidden;
+    background: #fefdfd;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+}
+.header .header-1 .search-form input
+{
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+}
+.header .header-1 .search-form label
+{
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.header .header-1 .search-form label:hover
+{
+    color: var(--pink);
+}
+.header .header-1 .icons div,
+.header .header-1 .icons a
+{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover
+{
+    color: var(--pink);
+}
+
+#search-btn
+{
+    display: none;
+}
+
+.header .header-2
+{
+    background: var(--bg-color1);
+}
+.header .header-2 .navbar
+{
+    text-align: center;
+}
+.header .header-2 .navbar a
+{
+    color: var(--white);
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.7rem;
+}
+.header .header-2 .navbar a:hover
+{
+    background: var(--pink);
+}
+
+.header .header-2.active
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.bottom-navbar
+{
+    text-align: center;
+    background: var(--bg-color1);
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: none;
+}
+.bottom-navbar a
+{
+    font-size: 2.5rem;
+    padding: 2rem;
+    color: var(--white);
+}
+.bottom-navbar a:hover
+{
+    background: var(--black);
+}
+
+.login-form-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    position: fixed;
+    top: 0; right: -105%;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+}
+.login-form-container.active
+{
+    right: 0;
+}
+
+.login-form-container form
+{
+    background: var(--white);
+    border: var(--border);
+    width: 40rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin: 2rem;
+}
+.login-form-container form h3
+{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+    text-align: center;
+}
+.login-form-container form span
+{
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+.login-form-container form .box
+{
+    width: 100%;
+    margin: .7rem 0;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 1rem 1.2rem;
+    color: var(--black);
+    text-transform: none;
+}
+.login-form-container form .checkbox
+{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+.login-form-container form .checkbox label
+{
+    font-size: 1.5rem;
+    color: var(--bg-color1);
+    cursor: pointer;
+}
+.login-form-container form .btn
+{
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+.login-form-container form p
+{
+    padding-top: .8rem;
+    color: var(--black);
+    font-size: 1.5rem;
+}
+.login-form-container form p a
+{
+    color: var(--bg-color1);
+    text-decoration: underline;
+}
+.login-form-container #close-login-btn
+{
+    position: absolute;
+    top: 1.5rem; right: 2.5rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.home .row
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.home .row .content
+{
+    flex: 1 1 5rem;
+}
+    .home .row .content h3
+{
+    font-size: 10rem;
+    color: var(--black);
+}
+    .home .row .content p
+{
+    color: var(--black);
+    font-size: 3rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
+.home .row .books-list
+{
+    margin: auto;
+    overflow: hidden;
+    width: 500px;
+    border-radius: 10px;
+    
+}
+.home .row .books-list .swiper-wraper
+{
+    display: flex;
+    transition: 1s;
+}
+.home .row .books-list a img
+{
+    height: 50rem;
+    border-radius: 10px;
+    justify-content: center;
+}
+.home .row .books-list a:hover img
+{
+    transform: scale(0.9);
+}
+
+#slide1:target ~ .swiper-wraper
+{
+    margin-left: 10%;
+}
+#slide2:target ~ .swiper-wraper
+{
+    margin-left: -100%;
+}
+#slide3:target ~ .swiper-wraper
+{
+    margin-left: -200%;
+}
+#slide4:target ~ .swiper-wraper
+{
+    margin-left: -300%;
+}
+#slide5:target ~ .swiper-wraper
+{
+    margin-left: -400%;
+}
+#slide6:target ~ .swiper-wraper
+{
+    margin-left: -500%;
+}
+#slide7:target ~ .swiper-wraper
+{
+    margin-left: -600%;
+}
+
+.navigation a
+{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: var(--black);
+    font-size: 0px;
+    border-radius: 50%;
+    margin: 3px;
+    transition: 1s;
+}
+.navigation a:hover
+{
+    background-color: var(--gold);
+}
+.navigation
+{
+    position: absolute;
+    margin-left: 5%;
+    margin-right: 15%;
+    text-align: center;
+    margin-top: -70px;
+}
