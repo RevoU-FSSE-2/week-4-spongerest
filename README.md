@@ -30,7 +30,7 @@ Aplikasi ini dibangun dengan menggunakan :
 -CSS
 -JavaScript
 
-##Process
+## Process
 -Git clone
 ![alt text](https://github.com/RevoU-FSSE-2/week-4-spongerest/blob/main/images/git%20clone.png)
 
